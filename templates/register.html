@@ -5,24 +5,21 @@
 {%endblock%} 
 
 {% block content %}
-    <div class="container">
-        <h1>Cadastre-se</h1>
+    <h1>Cadastre-se</h1>
 
-        <form action="" method="post">
-            <label for="full_name">Nome completo</label>
-            <input type="text" name="full_name" id="full_name">
+    <form action="" method="post">
+        <label for="full_name">Nome completo</label>
+        <input type="text" name="full_name" id="full_name">
 
-            <label for="create_email">E-mail</label>
-            <input type="email" name="create_email" id="create_email">
-            
-            <label for="create_password">Digite sua senha</label>
-            <input type="password" name="create_password" id="create_password">
-            
-            <label for="confirm_password">Confirmar senha</label>
-            <input type="password" name="confirm_password" id="confirm_password">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email">
+        
+        <label for="password">Digite sua senha</label>
+        <input type="password" name="password" id="password">
+        
+        <label for="confirm_password">Confirmar senha</label>
+        <input type="password" name="confirm_password" id="confirm_password">
 
-            <button type="submit" class="btn">Criar cadastro</button>
-        </form>
-    </div>
-    
+        <button type="submit" value="register" class="btn">Criar cadastro</button>
+    </form>
 {% endblock %}
