@@ -5,16 +5,14 @@
 {%endblock%} 
 
 {% block content %} 
-    <div class="container">
-        <h1>Entrar</h1>
-        <form action="" method="get">
-            <label for="username">Digite seu email</label>
-            <input type="username" name="username" id="username">
-            
-            <label for="password">Digite sua senha</label>
-            <input type="password" name="password" id="password">
+    <h1>Entrar</h1>
+    <form action="" method="get">
+        <label for="email">Digite seu email</label>
+        <input type="email" name="email" id="email">
+        
+        <label for="password">Digite sua senha</label>
+        <input type="password" name="password" id="password">
 
-            <button type="submit" class="btn">Entrar</button>
-        </form>
-    </div>
+        <button type="submit" value="Login" class="btn">Entrar</button>
+    </form>
 {% endblock %}
