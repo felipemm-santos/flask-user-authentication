@@ -8,6 +8,7 @@ a {
 }
 
 body {
+  font-size: 1.6rem;
   background-color: azure;
 }
 
@@ -69,4 +70,15 @@ form label{
   align-self: start;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+}
+
+input{
+  font-size: 2rem;
+}
+
+.success{
+  color: green;
+}
+.error{
+  color: crimson;
 }
