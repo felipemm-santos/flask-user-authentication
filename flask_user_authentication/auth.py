@@ -1,21 +1,13 @@
-import os
+from flask import Blueprint, redirect, render_template, request, flash, url_for
 
-from dotenv import load_dotenv
-from flask import Flask, flash, render_template, request, redirect, url_for
+bp = Blueprint('auth', __name__, url_prefix="/auth",
+                        template_folder='templates')
 
-app = Flask(__name__)
-app.secret_key = os.environ["SECRET_KEY"]
-
-@app.route("/")
-@app.route("/index")
-def home():
-    return render_template("index.html")
-
-@app.route("/login")
+@bp.route("/login")
 def login():
     return render_template("login.html")
 
-@app.route("/register", methods=["GET","POST"])
+@bp.route("/register", methods=["GET","POST"])
 def register():
     if request.method == "POST":
         full_name = request.form['full_name']
@@ -37,6 +29,3 @@ def register():
             return redirect(url_for('login'))
     
     return render_template("register.html")
-
-if __name__ == "__main__":
-  app.run()

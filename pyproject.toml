@@ -1,0 +1,14 @@
+[project]
+name = "flask_user_authentication"
+version = "1.0.0"
+description = "A user authenticantion aplication built with flask"
+readme = "readme.md"
+license = {file = "license.txt"}
+maintainers = [{name = "Felipe", email = "tfelipesantos99s@gmail.com"}]
+dependencies = [
+    "flask",
+]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
