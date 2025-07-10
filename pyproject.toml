@@ -1,12 +1,14 @@
 [project]
-name = "flask_user_authentication"
+name = "flask_auth"
 version = "1.0.0"
 description = "A user authenticantion aplication built with flask"
 readme = "readme.md"
 license = {file = "license.txt"}
 maintainers = [{name = "Felipe", email = "tfelipesantos99s@gmail.com"}]
 dependencies = [
-    "flask",
+    "Flask",
+    "Flask-SQLAlchemy",
+    "Flask-Migrate",
 ]
 
 [build-system]

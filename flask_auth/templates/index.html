@@ -8,7 +8,7 @@
     <h1>Seja Bem Vindo</h1>
     
     <div class="btn-group">
-        <a href="/login" class="btn"> Entrar </a>
-        <a href="/register" class="btn"> Cadastre-se </a>
+        <a href="{{url_for('auth.login')}}" class="btn"> Entrar </a>
+        <a href="{{url_for('auth.register')}}" class="btn"> Cadastre-se </a>
     </div>
 {%endblock%}

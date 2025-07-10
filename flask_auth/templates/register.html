@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+
+{%block title%}
+    Cadastro
+{%endblock%} 
+
+{% block content %}
+    <h1>Cadastre-se</h1>
+
+    <form action="" method="post">
+        <label for="first_name">Primeiro nome</label>
+        <input type="text" name="first_name" id="first_name" required>
+        
+        <label for="last_name">Sobrenome</label>
+        <input type="text" name="last_name" id="last_name" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required>
+        
+        <label for="password">Digite sua senha</label>
+        <input type="password" name="password" id="password" required>
+        
+        <label for="confirm_password">Confirmar senha</label>
+        <input type="password" name="confirm_password" id="confirm_password" required>
+
+        <button type="submit" value="register" class="btn">Criar cadastro</button>
+    </form>
+{% endblock %}
