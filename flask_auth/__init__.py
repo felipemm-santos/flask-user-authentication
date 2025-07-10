@@ -20,7 +20,7 @@ def create_app():
 
     @app.route("/")
     @app.route("/index")
-    def home():
+    def index():
         if "username" in session:
             return redirect(url_for("dashboard"))
         return render_template("index.html")
@@ -29,5 +29,5 @@ def create_app():
     def dashboard():
         if "username" in session:
             return render_template("dashboard.html", username=session["username"])
-        return redirect(url_for("index.html"))
+        return redirect(url_for("index"))
     return app
