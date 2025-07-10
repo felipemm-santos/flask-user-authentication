@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -21,6 +21,13 @@ def create_app():
     @app.route("/")
     @app.route("/index")
     def home():
+        if "username" in session:
+            return redirect(url_for("dashboard"))
         return render_template("index.html")
     
+    @app.route("/dashboard")
+    def dashboard():
+        if "username" in session:
+            return render_template("dashboard.html", username=session["username"])
+        return redirect(url_for("index.html"))
     return app
