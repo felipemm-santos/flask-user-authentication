@@ -15,8 +15,6 @@ def login():
         error=False
         user = User.query.filter_by(email=email).first()
         
-        print(user)
-
         if not user:
             flash("Email não cadastrado","error")
             error=True  
@@ -61,3 +59,8 @@ def register():
             return redirect(url_for('auth.login'))
     
     return render_template("register.html")
+
+@bp.route("/logout")
+def logout():
+    session.pop("username")
+    return redirect(url_for("index"))
