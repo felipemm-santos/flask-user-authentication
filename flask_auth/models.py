@@ -9,7 +9,7 @@ class User(db.Model):
     first_name = db.Column(db.String(15), nullable=False)
     last_name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password_hash = db.Column(db.String(120), nullable=False)
+    password_hash = db.Column(db.String(250), nullable=False)
 
     def __init__(self, first_name=None, last_name=None, email=None,password=None):
         self.first_name = first_name
